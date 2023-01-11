@@ -1,0 +1,32 @@
+.NavContainer {
+  max-width: 1500px;
+  margin: auto;
+  border: 1px solid teal;
+  position: fixed;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  padding: 1rem;
+}
+
+/* mobile devices only */
+@media only screen and (max-width: 420px) and (min-width: 0px) {
+  .NavContainer {
+    border: 1px solid black;
+  }
+}
+/* tablet  devices only */
+
+@media only screen and (max-width: 1000px) and (min-width: 421px) {
+  .NavContainer {
+    border: 1px solid blue;
+  }
+}
+
+/* laptop  devices only */
+
+@media only screen and (max-width: 1400px) and (min-width: 1001px) {
+  .NavContainer {
+    border: 1px solid red;
+  }
+}
