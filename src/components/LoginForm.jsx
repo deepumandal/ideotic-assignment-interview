@@ -1,12 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import styled from "../styled/auth/auth.module.css";
 import { AuthContext } from "../context/AuthContext";
 import axios from "axios";
 import Loader from "./Loader";
+import { useNavigate } from "react-router-dom";
 const LoginForm = () => {
   const [loginquery, setLoginquery] = useState({});
-
   const { state, dispatch } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   // login email and password
   const handleloginquery = (e) => {
@@ -21,8 +22,12 @@ const LoginForm = () => {
     axios
       .post(`https://reqres.in/api/login`, loginquery)
       .then((resp) => {
-        alert("login successful");
-        dispatch({ type: "LOGIN_FORM_SUCCESS", payload: resp.data });
+        new Promise((resolve, reject) => {
+          resolve(dispatch({ type: "LOGIN_FORM_SUCCESS", payload: resp.data }));
+        }).then(() => {
+          alert("login successful");
+          navigate("/");
+        });
       })
       .catch((err) => {
         alert("invalid credentials");

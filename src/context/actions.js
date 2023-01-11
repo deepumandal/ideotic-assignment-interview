@@ -27,6 +27,18 @@ export const tongle = (state, action) => {
                 loading: false,
             }
         }
+        case "LOGOUT": {
+            localStorage.removeItem('primary')
+            return {
+                ...state,
+                loading: false,
+                error: false,
+                data: {
+                    isAuth: false,
+                    userToken: null,
+                }
+            }
+        }
         default: return state
     }
 }

@@ -9,6 +9,17 @@
   padding: 1rem;
 }
 
+.logo,
+.login {
+  text-decoration: solid;
+  color: black;
+}
+.logo:hover,
+.login:hover {
+  color: grey;
+  letter-spacing: 0.6px;
+  transition: 1s;
+}
 /* mobile devices only */
 @media only screen and (max-width: 420px) and (min-width: 0px) {
   .NavContainer {
