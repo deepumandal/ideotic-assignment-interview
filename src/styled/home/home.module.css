@@ -10,3 +10,98 @@
   justify-content: space-between;
   align-items: center;
 }
+
+/* card css */
+.DogContainer {
+  /* border: 1px solid red; */
+  max-width: 250px;
+  height: 200px;
+  margin-top: 2rem;
+}
+.DogCardsHeading {
+  /* border: 1px solid red; */
+  margin: 1rem auto;
+  text-align: center;
+}
+.DogImage {
+  /* border: 1px solid red; */
+  height: 80%;
+  width: 100%;
+  max-width: 200px;
+  object-fit: contain;
+}
+.dogShowGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem 2rem;
+  margin: 2rem;
+  width: 100%;
+  /* border: 1px solid black; */
+
+}
+
+/* mobile devices only */
+@media only screen and (max-width: 444px) and (min-width: 0px) {
+  .dogShowGrid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .DogContainer {
+    /* border: 1px solid teal; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 300px;
+  }
+}
+
+/* tablet  devices only */
+@media only screen and (max-width: 600px) and (min-width: 444px) {
+  .dogShowGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+  }
+  .DogContainer {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 600px) {
+  .dogShowGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .DogContainer {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
+
+/* laptop  devices only */
+
+@media only screen and (max-width: 1400px) and (min-width: 1001px) {
+  .dogShowGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .DogContainer {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
+

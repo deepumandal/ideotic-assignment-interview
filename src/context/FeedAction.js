@@ -22,10 +22,16 @@ export const FeedAction = (state, action) => {
                 error: true,
             }
         }
-        case "GET_BREADDATA_SUCCESS" : {
+        case "GET_BREADDATA_SUCCESS": {
             return {
                 ...state,
-                data : action.payload
+                data: action.payload
+            }
+        }
+        case "GET_BREAD_CURRENT": {
+            return {
+                ...state,
+                current: action.payload,
             }
         }
 

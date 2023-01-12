@@ -13,6 +13,7 @@ const Navbar = () => {
       <FlexBox
         style={{
           padding: "0rem 2%",
+          // border: "1px solid black",
         }}
       >
         <Link className={styled.logo} to={"/"}>

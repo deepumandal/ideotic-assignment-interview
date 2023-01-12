@@ -5,10 +5,11 @@ import Pagination from "../../components/Pagination";
 import Search from "../../components/Search";
 import { FeedContext } from "../../context/FeedContext";
 import axios from "axios";
+import DogCard from "../../components/DogCard";
 const Home = () => {
   const { state, dispatch } = useContext(FeedContext);
   const [page, setPage] = useState(1);
-
+  console.log(state);
   const render = (bread) => {
     Promise.all(
       bread.map((item) => {
@@ -21,10 +22,20 @@ const Home = () => {
       })
     ).then((response) => {
       dispatch({ type: "GET_BREADDATA_SUCCESS", payload: response });
-      const current = response.slice(page*12, page*24)
-      dispatch({ type: "GET_BREAD_CURRENT" , })
+      const start = (page - 1) * 12;
+      const end = start + 12;
+      const current = response.slice(start, end);
+      dispatch({ type: "GET_BREAD_CURRENT", payload: current });
     });
   };
+
+  useEffect(() => {
+    const response = state.data;
+    const start = (page - 1) * 12;
+    const end = start + 12;
+    const current = response.slice(start, end);
+    dispatch({ type: "GET_BREAD_CURRENT", payload: current });
+  }, [page]);
 
   useEffect(() => {
     dispatch({ type: "FEED_LOADING" });
@@ -52,7 +63,11 @@ const Home = () => {
         <Search />
         <Pagination page={page} setPage={setPage} />
       </nav>
-      <div>{/* render */}</div>
+      <div className={styled.dogShowGrid}>
+        {state.current.map((item, i) => {
+          return <DogCard img={item.image} heading={item.name} />;
+        })}
+      </div>
     </FlexBox>
   );
 };

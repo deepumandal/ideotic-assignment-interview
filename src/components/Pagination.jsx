@@ -10,6 +10,11 @@ const Pagination = ({ page, setPage }) => {
   }, [length]);
 
 
+
+
+
+
+
   return (
     <FlexBox style={{ gap: "10px" }}>
       <button disabled={page==1} onClick={() => setPage((curr) => curr - 1)}> left </button>
