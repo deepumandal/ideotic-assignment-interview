@@ -1,0 +1,12 @@
+.Heading {
+  /* border: 1px solid red; */
+  margin: auto;
+  color: red;
+}
+.homeNav {
+  /* border: 1px solid red; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
