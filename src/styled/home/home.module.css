@@ -10,6 +10,28 @@
   justify-content: space-between;
   align-items: center;
 }
+.loader {
+  /* border: 1px solid red; */
+  position: relative;
+  left: 50;
+}
+
+/* pagination */
+.leftrightbtn {
+  background-color: #ebebeb;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 8px 9px;
+  border-radius: 50%;
+}
+.count {
+  background-color: #ebebeb;
+  outline: none;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 50%;
+}
 
 /* card css */
 .DogContainer {
@@ -37,7 +59,6 @@
   margin: 2rem;
   width: 100%;
   /* border: 1px solid black; */
-
 }
 
 /* mobile devices only */
@@ -104,4 +125,3 @@
     margin: auto;
   }
 }
-

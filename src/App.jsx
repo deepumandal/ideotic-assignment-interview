@@ -1,19 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-// import {  } from './styled/styled.module'
-import Allroute from './components/Allroute'
-import Navbar from './components/Navbar'
+import React, { useState } from "react";
+// import Allroute from './components/Allroute'
+// import Navbar from './components/Navbar'
 
-
+const Navbar = React.lazy(() => import("./components/Navbar"));
+const Allroute = React.lazy(() => import("./components/Allroute"));
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
       <Navbar />
       <Allroute />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

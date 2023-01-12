@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { memo, useContext } from "react";
 import { FlexBox } from "../styled/styled.module";
 import styled from "../styled/navbar/navbar.module.css";
 import { Link } from "react-router-dom";
@@ -32,4 +32,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo(Navbar)

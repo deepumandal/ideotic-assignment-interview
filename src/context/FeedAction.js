@@ -32,6 +32,8 @@ export const FeedAction = (state, action) => {
             return {
                 ...state,
                 current: action.payload,
+                loading : false,
+                error : false
             }
         }
 

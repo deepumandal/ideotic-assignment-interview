@@ -3,25 +3,25 @@ import styled from "styled-components";
 export const Container = styled.div` 
 //  mobile devices only
     @media only screen and (max-width: 420px) and (min-width: 0px){
-    border : 1px solid black;
+    // border : 1px solid black;
     
 }
 // tablet  devices only
 
     @media only screen and (max-width: 1000px) and (min-width: 421px){
-    border : 1px solid blue;
+    // border : 1px solid blue;
     };
 
 // laptop  devices only
     
     @media only screen and (max-width: 1400px) and (min-width: 1001px){
-        border : 1px solid red;
+        // border : 1px solid red;
 
     }
     max-width: 1500px;
     margin: auto;
     margin-top : 6rem;
-    border: 1px solid teal;
+    // border: 1px solid teal;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

@@ -1,0 +1,43 @@
+.description {
+  /* border: 1px solid red; */
+  height: 100%;
+}
+.container {
+  display: flex;
+  width: "100%";
+  justify-content: "start";
+  gap: "3rem";
+}
+
+@media only screen and (max-width: 741px) {
+  .container {
+    flex-direction: column;
+  }
+  .image {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 1000px) and (min-width: 741px) {
+  .container {
+    flex-direction: row;
+  }
+  .image {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    flex-direction: row;
+  }
+  .image {
+    width: 400px;
+    margin: auto;
+  }
+}
+.heading {
+  margin: 1rem;
+  text-align: center;
+}
